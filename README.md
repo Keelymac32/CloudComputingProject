@@ -41,8 +41,11 @@ Cleats will be stored in shoe DB
 *Not fully complete still working through what languages would be best *
 
 Javascript and NodeJs - Front End Components
+
 GoLang - for user profiles
+
 Python - for ordering and payment
+
 MongoDB - for databases
 
 ## General description of the UI with the primary actions

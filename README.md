@@ -11,17 +11,29 @@ I will be working independently on this project.
 Here are the microservices I hope to implement:
 
 Order Placement Service 
+
 Order Status Update Service
+
 Shoe orders will be stored in an Order DB
+
 Star Shoe Service 
+
 Starred shoes will be stored in a Starred Shoe DB 
+
 Purchase Service 
+
 Log-In Service 
+
 New Profile Creation Service
+
 Users profiles will be stored in a Users DB
+
 Sneaker Catalog service 
+
 Sneakers can be stored in sneaker DB
+
 Cleats Catalog 
+
 Cleats will be stored in shoe DB
 
 ## Statement of the estimated languages and frameworks

@@ -1,9 +1,12 @@
-![app_plan](./shoe_store_modules.jpg)
+
 
 # Keelyn's Course Project Kick Start Updated 3/30 
 
 ## Application Nature and Purpose
 The nature of this application will be a web based athletic shoe store. Clients will create an account and have the options to buy athletic sneakers or cleats. There will be two seperate catalogs depending on what the user would like to browse. Users will also be able to star shoes for a later purchase. Once shoes are ordered they will be stored in a "previous orders" section where their status wil be displayed as well as updated once order is complete. The website will also keep track of the previously starred shoes of the user so they can revisit shoes that they had been interested in prior. 
+
+## Module Lay Out
+![app_plan](./shoe_store_modules.jpg)
 
 ## People Involved
 I will be working independently on this project. 

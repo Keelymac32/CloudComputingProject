@@ -1,4 +1,4 @@
-./shoe_store_modules.jpg
+![app_plan](./shoe_store_modules.jpg)
 
 # Keelyn's Course Project Kick Start Updated 3/30 
 

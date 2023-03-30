@@ -1,0 +1,23 @@
+ 
+ #page-title {
+        text-align: center;
+          }
+
+      /* CSS styles for the buttons */
+button {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      /* Style for the blue button */
+.blue {
+        background-color: blue;
+      }
+      /* Style for the orange button */
+.orange {
+        background-color: rgb(255, 155, 42);
+      }

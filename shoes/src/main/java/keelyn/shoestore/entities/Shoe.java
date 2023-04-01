@@ -7,9 +7,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-
+@Entity
 public class Shoe {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private String url;
     private String type;
@@ -49,7 +50,7 @@ public class Shoe {
         this.inventory = inventory;
     }
 
-    public Shoe(String url, String type, String name, Double price) {
+    public Shoe(String type, String name, Double price) {
         this.url = url;
         this.type = type;
         this.name = name;
@@ -64,6 +65,14 @@ public class Shoe {
         this.inventory = inventory;
     }
 
+    @Override
+public String toString() {
+    return "Shoe{" +
+            "type=" + type +
+            ", name='" + name + '\'' +
+            ", price=" + price +
+            '}';
+}
 
 
     

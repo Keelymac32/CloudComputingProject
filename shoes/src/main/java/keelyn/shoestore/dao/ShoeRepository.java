@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @Transactional
-public interface ShoeRepository extends JpaRepository<Product,Integer> {
-    List<Product> findAllByPriceGreaterThanEqual(double amount);
-    List<Product> findTop10ByNameContainsOrderByPrice(String regex);
+public interface ShoeRepository extends JpaRepository<Shoe,Integer> {
+    List<Shoe> findAllByPriceGreaterThanEqual(double amount);
+    List<Shoe> findTop10ByNameContainsOrderByPrice(String regex);
 }

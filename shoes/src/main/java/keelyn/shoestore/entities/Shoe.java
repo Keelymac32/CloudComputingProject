@@ -12,12 +12,14 @@ public class Shoe {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private String url;
+    //private String url;
+    private Integer id;
     private String type;
     private String name;
     private Double price;
-    private Integer inventory = 0;
+    //private Integer inventory = 0;
 
+    /* 
     public String getUrl() {
         return this.url;
     }
@@ -25,6 +27,17 @@ public class Shoe {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    
+*/
+
+    public Integer getId() {
+    return this.id;
+    }
+
+    public void setId(Integer id) {
+    this.id = id;
+    };
 
     public String getName() {
         return this.name;
@@ -42,32 +55,17 @@ public class Shoe {
         this.type = type;
     }
 
-    public Integer getInventory() {
-        return this.inventory;
-    }
-
-    public void setInventory(Integer inventory) {
-        this.inventory = inventory;
-    }
-
-    public Shoe(String type, String name, Double price) {
-        this.url = url;
+    public Shoe(Integer id, String type, String name, Double price) {
+        //this.url = url;
         this.type = type;
         this.name = name;
         this.price = price;
-    }
-
-    public Shoe(String url, String type, String name, Double price, Integer inventory) {
-        this.url = url;
-        this.type = type;
-        this.name = name;
-        this.price = price;
-        this.inventory = inventory;
     }
 
     @Override
 public String toString() {
     return "Shoe{" +
+            "id=" + id +
             "type=" + type +
             ", name='" + name + '\'' +
             ", price=" + price +

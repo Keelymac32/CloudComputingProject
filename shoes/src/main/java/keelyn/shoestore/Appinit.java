@@ -1,4 +1,4 @@
-package edu.trincoll.shopping;
+package keelyn.shoestore;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +23,8 @@ public class Appinit implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         repository.saveAll(
-        List.of(new Shoe("Cleats", "Nike Lax", 100.00),
-        new Shoe("Sneakers", "Nike Pegasus", 94.99),
-        new Shoe("Sneakers", "Adidas Boost", 120.99)));
-
+        List.of(new Shoe(1,"Cleats", "Nike Lax", 100.00),
+        new Shoe(2,"Sneakers", "Nike Pegasus", 94.99),
+        new Shoe(3,"Sneakers", "Adidas Boost", 120.99)));
     }
 }

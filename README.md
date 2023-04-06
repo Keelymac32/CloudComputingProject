@@ -20,25 +20,15 @@ Order Status Update Service
 
 Shoe orders will be stored in an Order DB
 
-Star Shoe Service 
+Add/Delete Star Shoe Service 
 
 Starred shoes will be stored in a Starred Shoe DB 
 
 Purchase Service 
 
-Log-In Service 
+Sneakers and Cleats can be stored in sneaker DB
 
-New Profile Creation Service
-
-Users profiles will be stored in a Users DB
-
-Sneaker Catalog service 
-
-Sneakers can be stored in sneaker DB
-
-Cleats Catalog 
-
-Cleats will be stored in shoe DB
+Check Out Service 
 
 ## Statement of the estimated languages and frameworks
 

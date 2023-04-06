@@ -1,4 +1,4 @@
-package keelyn.shoestore.entities;
+package keelyn.stars.entities;
 
 
 import java.util.*;
@@ -17,14 +17,6 @@ public class Shoe {
     private String type;
     private String name;
     private Double price;
-    private Integer inventory;
-
-    public Integer getInventory() {
-        return this.inventory;
-    }
-
-    public void setInventory(Integer inventory) {
-		this.inventory = inventory;}
 
 
     public Integer getId() {
@@ -52,31 +44,29 @@ public class Shoe {
     }
 
     public Shoe(){
-        this.type = "None";
-        this.name = "No Name";
+        this.type = "none";
+        this.name = "no name";
         this.price = 0.00;
-        this.inventory = 0;
     }
 
-    public Shoe(Integer id, String type, String name, Double price, Integer inventoryInteger) {
+    public Shoe(Integer id, String type, String name, Double price){
         //this.url = url;
         this.type = type;
         this.name = name;
         this.price = price;
-        this.inventory = inventoryInteger;
     }
 
     @Override
 public String toString() {
     return "Shoe{" +
-            "id=" + id +
-            "type=" + type +
-            ", name='" + name + '\'' +
-            ", price=" + price +
-             ", inventory= " + inventory+
+            "id= " + id +
+            "type= " + type +
+            ", name= '" + name + '\'' +
+            ", price= $" + price +
             '}';
 }
 
 
     
 }
+

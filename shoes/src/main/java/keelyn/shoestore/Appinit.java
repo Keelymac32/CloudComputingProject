@@ -23,8 +23,11 @@ public class Appinit implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         repository.saveAll(
-        List.of(new Shoe(1,"Cleats", "Nike Lax", 100.00),
-        new Shoe(2,"Sneakers", "Nike Pegasus", 94.99),
-        new Shoe(3,"Sneakers", "Adidas Boost", 120.99)));
+       List.of(new Shoe(1,"Sneaker","Nike Pegasus",99.99,9),
+       new Shoe(2,"Cleat", "Nike Hurrache Lax",119.99,5),
+       new Shoe(3,"Sneaker","Nike Zoom Fly",79.99,10)))
+       .forEach(System.out::println);
+    
+    
     }
 }

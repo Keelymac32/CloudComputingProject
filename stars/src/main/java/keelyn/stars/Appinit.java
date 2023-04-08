@@ -27,7 +27,7 @@ public class Appinit implements CommandLineRunner{
         
         Shoe deletion = new Shoe(4, "Cleat", "Adidas Soccer Cleat", 100.00);
         repository.saveAll(
-       List.of(new Shoe(1,"Sneaker","Nike Pegasus",99.99),
+        List.of(new Shoe(1,"Sneaker","Nike Pegasus",99.99),
        new Shoe(2,"Cleat", "Nike Hurrache Lax",119.99),
        new Shoe(3,"Sneaker","Nike Zoom Fly",79.99), deletion))
        .forEach(System.out::println);

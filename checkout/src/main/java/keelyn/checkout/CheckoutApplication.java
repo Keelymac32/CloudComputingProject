@@ -1,14 +1,13 @@
-package keelyn.stars;
+package keelyn.checkout;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StarsApplication {
+public class CheckoutApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StarsApplication.class, args);
+		SpringApplication.run(CheckoutApplication.class, args);
 	}
-
 
 }

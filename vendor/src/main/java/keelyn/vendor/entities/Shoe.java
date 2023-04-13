@@ -17,6 +17,7 @@ public class Shoe {
     private String type;
     private String name;
     private Double price;
+    public Object getId;
 
     public Double getPrice() {
         return this.price;

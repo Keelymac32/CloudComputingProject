@@ -1,16 +1,19 @@
 package keelyn.vendor;
 
-import keelyn.vendor.entities.Shoe;
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.*;
-import java.util.ArrayList;;
+import org.springframework.web.bind.annotation.RestController;
 
-
+import jakarta.validation.Valid;
+import keelyn.vendor.entities.Shoe; 
 
 
 
@@ -20,10 +23,7 @@ import java.util.ArrayList;;
 public class VendorRestController {
     
     public ArrayList<Shoe> inventory = new ArrayList<Shoe>();
-    
-
-    ArrayList<String> gfg = new ArrayList<String>();
- 
+     
         // Initialize an ArrayList with add()
 
 @Autowired
@@ -32,15 +32,7 @@ public class VendorRestController {
 
     @GetMapping()
     public String getinventory(){
-        inventory.add(new Shoe(1,"Sneaker","Nike Pegasus",99.99));
-        inventory.add(new Shoe(2,"Sneaker","Nike Pegasus",109.99)); 
-        inventory.add(new Shoe(4, "Cleat", "Adidas Soccer Cleat", 100.00));
-
-
         //Call to the inventory database will return items in the inventory 
-    
-        
-        
         return inventory.toString();
     }
 
@@ -56,17 +48,26 @@ public class VendorRestController {
 
 
 
-
-
     @DeleteMapping()
-    public Boolean deleteShoeInventory(@Valid @RequestBody Shoe shoe){
-    return  inventory.remove(shoe);
+    public String deleteShoeInventory(@Valid @RequestBody Shoe shoe){
+
+        return inventory.toString();
     }
 
     @PutMapping()
-    public Shoe updateShoeInventory(@Valid @RequestBody Shoe shoe){
+    public String updateShoeInventory(@Valid @RequestBody Shoe updatedShoe){
+        String status = "Not Updated";
+        for (Shoe item : inventory){
+            if (item.getId() == updatedShoe.getId()){
+                System.out.print("found id");
+                inventory.remove(item);
+                addShoeInventory(updatedShoe);
+                status = "Updated";
+            }
         
-        return shoe;
+        }
+
+        return status;
     }
 
 

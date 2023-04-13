@@ -51,13 +51,19 @@ public class Shoe {
     }
 
     public Shoe(){
+        this.id = 0;
         this.type = "none";
         this.name = "no name";
         this.price = 0.00;
     }
-
+    public Shoe( String type, String name){
+        //this.url = url;
+        this.type = type;
+        this.name = name;
+    }
     public Shoe(Integer id, String type, String name, Double price){
         //this.url = url;
+        this.id = id;
         this.type = type;
         this.name = name;
         this.price = price;

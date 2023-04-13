@@ -1,4 +1,4 @@
-package keelyn.seller.entities;
+package keelyn.checkout.entities;
  
 import java.util.*;
 import jakarta.persistence.Entity;

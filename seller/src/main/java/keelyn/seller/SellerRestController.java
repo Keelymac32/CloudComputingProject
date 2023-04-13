@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
-import keelyn.seller.entities.*;
-
+import keelyn.seller.entities.Shoe;
+import keelyn.seller.entities.creditcard;
 
 
 @RestController
@@ -36,12 +36,6 @@ public class SellerRestController {
         return cart.toString();
     }
 
-    @GetMapping()
-    public String checkOut(@Valid @RequestBody creditcard card ){
-        //call to check out microservice
-        return card.toString();
-    }
-
 
 // Method that adds a shoe to the inventory 
     @PostMapping()
@@ -50,21 +44,22 @@ public class SellerRestController {
         return shoe;
 
 }
-
-
+    @PostMapping("/checkout")
+    public String Checkout(@Valid @RequestBody creditcard card){
+        
+    
+        return "paid status";
+}
 
     @DeleteMapping()
     public String deleteShoeCart(@Valid @RequestBody Shoe shoe){
         cart.remove(shoe);
         return cart.toString();
     }
-
-    @DeleteMapping()
-    public String deleteAllCart(){
+    @DeleteMapping("/deleteall")
+    public String deleteAllShoeCart(@Valid @RequestBody Shoe shoe){
         cart.removeAll(cart);
         return cart.toString();
     }
-
-
 
  }

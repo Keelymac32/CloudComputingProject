@@ -50,24 +50,15 @@ public class VendorRestController {
 
     @DeleteMapping()
     public String deleteShoeInventory(@Valid @RequestBody Shoe shoe){
-
+        inventory.remove(shoe);
         return inventory.toString();
     }
 
     @PutMapping()
     public String updateShoeInventory(@Valid @RequestBody Shoe updatedShoe){
-        String status = "Not Updated";
-        for (Shoe item : inventory){
-            if (item.getId() == updatedShoe.getId()){
-                System.out.print("found id");
-                inventory.remove(item);
-                addShoeInventory(updatedShoe);
-                status = "Updated";
-            }
         
-        }
 
-        return status;
+        return "Not Configured";
     }
 
 

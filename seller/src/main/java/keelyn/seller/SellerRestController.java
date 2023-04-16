@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
 import keelyn.seller.entities.Shoe;
 import keelyn.seller.entities.creditcard;
+import keelyn.seller.services.gotocheckout;
 
 
 @RestController
@@ -23,7 +24,9 @@ import keelyn.seller.entities.creditcard;
 public class SellerRestController {
     
     public ArrayList<Shoe> cart = new ArrayList<Shoe>();
-     
+    
+    private gotocheckout checkoutService = new gotocheckout();
+
         // Initialize an ArrayList with add()
 
 @Autowired
@@ -46,7 +49,7 @@ public class SellerRestController {
 }
     @PostMapping("/checkout")
     public String Checkout(@Valid @RequestBody creditcard card){
-        
+          
     
         return "paid status";
 }

@@ -1,6 +1,8 @@
 package keelyn.checkout;
 
+
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
@@ -23,7 +26,7 @@ import keelyn.checkout.entities.creditcard;
 @SpringBootApplication
 public class CheckoutRestController {
     
-    public ArrayList<creditcard> creditcards = new ArrayList<creditcard>();
+    private List<creditcard> creditcards = new ArrayList<creditcard>();
      
         // Initialize an ArrayList with add()
 
@@ -32,7 +35,7 @@ public class CheckoutRestController {
     
 
     @GetMapping()
-    public Double getFinalPrice(@Valid @RequestBody ArrayList<Shoe> checkoutcart){
+    public Double getFinalPrice(@RequestParam List<Shoe> checkoutcart){
         Double total = 0.0;
         for (Shoe item : checkoutcart){
             total = total + item.getPrice();

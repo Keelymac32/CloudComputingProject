@@ -9,9 +9,9 @@ public class gotocheckout {
     public Double gettingTotal() {
         String url = "http://world-pop/countries";
         RestTemplate restTemplate = new RestTemplate();
-        Country[] countries = restTemplate.getForObject(url, Country[].class);
+        //Country[] countries = restTemplate.getForObject(url, Country[].class);
 
-        return filterUnknowns(merge(countries));
+        return 0.0;
     }
 
 }

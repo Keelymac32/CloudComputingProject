@@ -6,8 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.util.List;
 import keelyn.checkout.entities.Shoe;
-import keelyn.checkout.entities.creditcard;;
-
+import keelyn.checkout.entities.creditcard;
 
 @Component
 public class Appinit implements CommandLineRunner{

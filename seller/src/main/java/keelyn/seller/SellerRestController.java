@@ -27,31 +27,25 @@ public class SellerRestController {
     
     private gotocheckout checkoutService = new gotocheckout();
 
-        // Initialize an ArrayList with add()
-
 @Autowired
-   //hard coded shoes that will be pulled instead form check out 
-    
 
     @GetMapping()
     public String getCart(){
-        //Call to the inventory database will return items in the inventory 
         return cart.toString();
     }
 
+    @GetMapping("/checkout")
+    public Double Checkout(@Valid @RequestBody creditcard card){
+        Double total = 0.0;
+        total = checkoutService.gettingTotal(cart);
+        return total;
+}
 
-// Method that adds a shoe to the inventory 
     @PostMapping()
     public Shoe addShoeCart(@Valid @RequestBody Shoe shoe){
         cart.add(shoe);
         return shoe;
 
-}
-    @PostMapping("/checkout")
-    public String Checkout(@Valid @RequestBody creditcard card){
-          
-    
-        return "paid status";
 }
 
     @DeleteMapping()

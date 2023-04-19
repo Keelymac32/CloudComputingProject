@@ -23,23 +23,21 @@ import keelyn.checkout.entities.creditcard;
 public class CheckoutRestController {
     
     public ArrayList<Shoe> cart = new ArrayList<Shoe>();
-    
+    private Double total = 0.0;
 
 
 @Autowired
     
-    @GetMapping()
-    public String getCart(){
-        return "Hello";
+    @GetMapping("/total")
+    public Double getTotal(){
+        return total;
     }
 
 
-    @PostMapping()
-    public Double addShoeCart(@Valid @RequestBody List<Shoe> shoeList){
-        Double total = 0.0;
+    @PostMapping("/addcart")
+    public void addShoeCart(@Valid @RequestBody List<Shoe> shoeList){
         for (Shoe item : shoeList){
             total = total + item.getPrice();
         }
-        return total;
     }
  }

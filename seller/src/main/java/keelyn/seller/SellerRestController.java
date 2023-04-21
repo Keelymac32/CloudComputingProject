@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
 import keelyn.seller.entities.Shoe;
 import keelyn.seller.entities.creditcard;
+import keelyn.seller.services.goToInventory;
 import keelyn.seller.services.gotocheckout;
 
 
@@ -24,8 +25,10 @@ import keelyn.seller.services.gotocheckout;
 public class SellerRestController {
     
     public ArrayList<Shoe> cart = new ArrayList<Shoe>();
-    
+
+
     private gotocheckout checkoutService = new gotocheckout();
+    private goToInventory InventoryService = new goToInventory();
 
 @Autowired
 
@@ -33,6 +36,13 @@ public class SellerRestController {
     public String getCart(){
         return cart.toString();
     }
+
+    @GetMapping("/inventory")
+    public String GetInventory(){
+       String inventory = InventoryService.gettingInventory();
+       return inventory;
+    }
+
 
     @GetMapping("/checkout")
     public Double Checkout(@Valid @RequestBody creditcard card){

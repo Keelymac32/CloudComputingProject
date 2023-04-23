@@ -5,7 +5,6 @@
 The nature of this application will be a web based athletic shoe store. There will be two different users, a vendor that is able to add shoes to the inventory and a buyer who will be adding the shoes to their cart then able to check out.       
 
 ## Module Lay Out
-![app_plan](./shoe_store_modules.jpg)
 
 ## People Involved
 I will be working independently on this project. 

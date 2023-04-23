@@ -36,6 +36,7 @@ public class CheckoutRestController {
 
     @PostMapping("/addcart")
     public void addShoeCart(@Valid @RequestBody List<Shoe> shoeList){
+        total = 0.0; 
         for (Shoe item : shoeList){
             total = total + item.getPrice();
         }

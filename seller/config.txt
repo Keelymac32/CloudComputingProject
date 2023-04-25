@@ -1,0 +1,4 @@
+iHostUrl= //either will be local host or nodeport of pod
+iPortUrl= //8082 or 3....
+cHostUrl=
+cPortUrl=

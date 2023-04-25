@@ -11,12 +11,17 @@ import java.util.*;
 
 public class goToInventory {
     public String gettingInventory() {
-        String getUrl = "http://localhost:8082/vendor";
+       
+        String hosturl = System.getProperty("iHostUrl","localhost");
+        String porturl = System.getProperty("iPortUrl","8082");
+
+        String geturl = "http://" + hosturl + ":" + porturl + "/vendor";
+        
         
         RestTemplate restTemplate = new RestTemplate();
         
         //Getting total calculated in GET function of checkout microservice
-        String inventory = restTemplate.getForObject(getUrl,String.class );
+        String inventory = restTemplate.getForObject(geturl,String.class );
         return inventory;
     }
 }

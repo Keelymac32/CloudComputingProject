@@ -46,8 +46,6 @@ public class VendorRestController {
 
 }
 
-
-
     @DeleteMapping()
     public String deleteShoeInventory(@Valid @RequestBody Shoe shoe){
         inventory.remove(shoe);

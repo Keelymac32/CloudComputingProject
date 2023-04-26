@@ -25,11 +25,21 @@ spec:
             configMapKeyRef:
               name: application-context
               key: checkout_host
-          name: CHECKOUT_PORT
+        - name: CHECKOUT_PORT
           valueFrom:
             configMapKeyRef:
               name: application-context
               key: checkout_port
+        - name: INVENTORY_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: application-context
+              key: inventory_host
+        - name: INVENTORY_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: application-context
+              key: inventory_port
 ---
 apiVersion: v1
 kind: Service

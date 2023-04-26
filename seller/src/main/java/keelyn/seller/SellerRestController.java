@@ -21,7 +21,6 @@ import keelyn.seller.services.gotocheckout;
 
 @RestController
 @RequestMapping(value = "/seller" )
-@SpringBootApplication
 public class SellerRestController {
     
     public ArrayList<Shoe> cart = new ArrayList<Shoe>();

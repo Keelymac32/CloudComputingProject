@@ -5,3 +5,5 @@ metadata:
 data:
   checkout_host: checkout-service
   checkout_port: "80"
+  inventory_host: vendor-service
+  inventory_port: "80"

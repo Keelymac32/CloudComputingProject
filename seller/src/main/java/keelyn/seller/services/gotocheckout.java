@@ -13,12 +13,12 @@ public class gotocheckout {
     public Double gettingTotal(List<Shoe> shoeList) {
         //urls for get and post commands on checkout microservice 
         
-        String hosturl = System.getProperty("cHostUrl","localhost");
-        String porturl = System.getProperty("cPortUrl","8080");
+        String host = System.getProperty("CHECKOUT_HOST","localhost");
+        String port = System.getProperty("CHECKOUT_PORT","8080");
 
-        String geturl = "http://" + hosturl + ":" + porturl + "/checkout/total";
+        String geturl = "http://" + host + ":" + port + "/checkout/total";
         
-        String posturl = "http://" + hosturl + ":" + porturl + "/checkout/addcart";
+        String posturl = "http://" + host + ":" + port + "/checkout/addcart";
        
 
 

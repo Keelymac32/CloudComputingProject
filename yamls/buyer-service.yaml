@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buyer-deployment
+  labels:
+    app.kubernetes.io/name: buyer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: buyer
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: buyer
+    spec:
+      containers:
+      - name: buyer-image
+        image: keelymac32/buyerimage
+        ports:
+        - containerPort: 8080
+        env:
+        - name: CHECKOUT_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: application-context
+              key: checkout_host
+          name: CHECKOUT_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: application-context
+              key: checkout_port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: buyer-service
+spec:
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: buyer
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 80
+      targetPort: 8080

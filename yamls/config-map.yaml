@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: application-context
+data:
+  checkout_host: checkout-service
+  checkout_port: "80"

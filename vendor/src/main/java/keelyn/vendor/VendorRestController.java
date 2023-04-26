@@ -19,7 +19,6 @@ import keelyn.vendor.entities.Shoe;
 
 @RestController
 @RequestMapping(value = "/vendor" )
-@SpringBootApplication
 public class VendorRestController {
     
     public ArrayList<Shoe> inventory = new ArrayList<Shoe>();

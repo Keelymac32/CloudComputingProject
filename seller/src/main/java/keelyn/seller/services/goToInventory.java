@@ -12,11 +12,9 @@ import java.util.*;
 public class goToInventory {
     public String gettingInventory() {
        
-        String host = System.getProperty("INVENTORY_HOST","localhost");
-        String port = System.getProperty("INVENTORY_PORT","8080");
-
+        String host = System.getenv("INVENTORY_HOST");
+        String port = System.getenv("INVENTORY_PORT");
         String geturl = "http://" + host + ":" + port + "/vendor";
-        
         
         RestTemplate restTemplate = new RestTemplate();
         

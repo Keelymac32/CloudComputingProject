@@ -27,11 +27,11 @@ public class gotocheckout {
         RestTemplate restTemplate = new RestTemplate();
        
         //I think this is passing list of shoes to the POST function in checkout microservice
-        restTemplate.postForObject(posturl, shoeList, null) ;
+        String productCreateResponse = restTemplate.postForObject(posturl, shoeList, String.class);
         
         //Getting total calculated in GET function of checkout microservice
         Double total = restTemplate.getForObject(geturl, Double.class);
-        
+
         return total;
     }
 

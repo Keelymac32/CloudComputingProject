@@ -20,7 +20,7 @@ import keelyn.seller.services.gotocheckout;
 
 
 @RestController
-@RequestMapping(value = "/seller" )
+@RequestMapping(value = "/buyer" )
 public class SellerRestController {
     
     public ArrayList<Shoe> cart = new ArrayList<Shoe>();

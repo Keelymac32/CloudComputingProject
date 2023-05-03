@@ -15,7 +15,7 @@ spec:
         app.kubernetes.io/name: buyer
     spec:
       containers:
-      - name: buyer-image
+      - name: buyerimage
         image: keelymac32/buyerimage
         ports:
         - containerPort: 8080

@@ -19,7 +19,6 @@ import keelyn.checkout.entities.creditcard;
 
 @RestController
 @RequestMapping(value = "/checkout" )
-@SpringBootApplication
 public class CheckoutRestController {
     
     public ArrayList<Shoe> cart = new ArrayList<Shoe>();
@@ -35,10 +34,12 @@ public class CheckoutRestController {
 
 
     @PostMapping("/addcart")
-    public void addShoeCart(@Valid @RequestBody List<Shoe> shoeList){
+    public String addShoeCart(@Valid @RequestBody List<Shoe> shoeList){
         total = 0.0; 
         for (Shoe item : shoeList){
             total = total + item.getPrice();
         }
+    String output = "okay";
+    return output;
     }
  }

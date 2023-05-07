@@ -27,14 +27,14 @@ The user will be able to use CURL commands to place orders for either sneaker or
 ## Deployment instructions 
 There are two bash shell scripts that will deploy the microservices and config map on to kubernetes using YAML files. These YAML files can be found in the "kubernetes" folder of the project. 
 ### Local Machine
-If you would like to deploy on your local machine use the "deploy.sh" scipt. In your local terminal run the following command: 
-'''sh
+If you would like to deploy on your local machine use the "deploy.sh" scipt. In your local terminal execute the following command: 
+```sh
 chmod +x deploy.sh 
-'''
-followed by:
-'''sh
+```
+Then run the script using:
+```sh
 ./deploy.sh 
-'''
+```
 This will clone the github repository on to your local computer and deploy the YAML files to kubernetes. 
 This will deploy the entire suite of microservices to kubernetes on your local computer. 
 ### GKE Virtual Machine

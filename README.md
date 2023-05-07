@@ -12,9 +12,9 @@ The nature of this application will be a web based athletic shoe store. There wi
 1. Buyer Microservice that allows users to see the shops inventory, add shoes to their cart, delete their cart or
 check out. This buyer service will connect with the vendor to bring up the inventory, and connect with the checkout service to get the cart total.  
 
-2. Vendor Mircoservice that allows users to add shoes to their inventory or delete shoes.
+2. Vendor Mircoservice that allows vendors to add shoes to their inventory or delete shoes.
 
-3. Checkout Microserice that aids in adding the shoes in the cart and producing a total. 
+3. Checkout Microserice that aids in adding the shoes in the cart and producing a total price. 
 
 ## Statement of the estimated languages and frameworks
 
@@ -23,6 +23,6 @@ Java and SpringBoot for Microservices
 Postman for CURL commands
 
 ## General description of the UI with the primary actions
-The user will be able to use CURL commands place orders for either sneaker or cleats. Users can add shoes to their carts by looking at the inventory edited by the vendor. When the order is place the order info will be displayed. The vendor is able to add shoes to the inventory or take shoes away.
+The user will be able to use CURL commands to place orders for either sneaker or cleats. Buyers can add shoes to their carts or delete them. Buyers can look at the inventory edited by the vendor to see what shoes are available. The buyer can check out to place their order and get a final total. The vendor is able to add shoes to the inventory or take shoes away.
 
 ##Deployment instructions 

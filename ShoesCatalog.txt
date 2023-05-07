@@ -1,0 +1,29 @@
+Shoes
+
+{   "id": 1, 
+    "type": "Cleat",
+    "name" : "Nike Zoom Mercurial Soccer Cleat", 
+    "price" : 274.99}
+
+{   "id": 2, 
+    "type": "Cleat",
+    "name" : "Adidas Predator Accuracy+ Soccer Cleat", 
+    "price" : 208.00}
+
+{   "id": 3, 
+    "type": "Sneaker",
+    "name" : "Nike Pegasus Running Sneaker", 
+    "price" : 119.99}
+
+{   "id": 4, 
+    "type": "Sneaker",
+    "name" : "Nike Zoom Fly Running Sneaker", 
+    "price" : 109.99}
+
+
+    Credit Cards 
+    { 
+    "id": 2322323, 
+    "CSV": 370,
+    "name" : "Keelyn McNamara", 
+    "data" : "01/01/2001"}

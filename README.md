@@ -33,7 +33,7 @@ Download Using This Link:
 https://github.com/Keelymac32/CloudComputingProject/blob/main/deploy.sh
 ```
 
-In your local terminal execute the following command: 
+Once the file is on your local computer, in your local terminal execute the following command: 
 
 ```sh
 chmod +x deploy.sh 

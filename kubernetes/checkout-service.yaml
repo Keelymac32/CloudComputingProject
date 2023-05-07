@@ -36,4 +36,4 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 33000
+      nodePort: 31001

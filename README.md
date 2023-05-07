@@ -2,8 +2,7 @@
 # Keelyn's Shoe Store Micro-Service Web App
 
 ## Application Nature and Purpose
-The nature of this application is  a web based athletic shoe store. There are two different users that can use this app, a vendor that is able to add and take off shoes to the inventory and a buyer who will be adding the shoes listed in the inventory to their cart then able to check out.       
-
+The nature of this application is  a web based athletic shoe store. There are two different users that can use this app, a vendor that is able to add and delete shoes in the inventory and a buyer who will be adding the shoes listed in the inventory to their cart then able to check out. The buyer will see a final description of their order as well as the final price. 
 ## Module Lay Out
 ![map](https://user-images.githubusercontent.com/91858712/236646005-5d24b7c3-fead-40bd-9918-e810be0b7768.jpg)
 

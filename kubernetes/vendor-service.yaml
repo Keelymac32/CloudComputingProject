@@ -17,6 +17,11 @@ spec:
       containers:
       - name: vendorimage
         image: keelymac32/vendorimage
+        resources:
+          requests:
+            memory: "200Mi"
+          limits:
+            memory: "200Mi"
         ports:
         - containerPort: 8080
 ---

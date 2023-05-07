@@ -17,6 +17,11 @@ spec:
       containers:
       - name: buyerimage
         image: keelymac32/buyerimage
+        resources:
+          requests:
+            memory: "200Mi"
+          limits:
+            memory: "200Mi"
         ports:
         - containerPort: 8080
         env:

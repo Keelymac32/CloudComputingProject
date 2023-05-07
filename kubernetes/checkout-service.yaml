@@ -17,6 +17,11 @@ spec:
       containers:
       - name: checkoutimage
         image: keelymac32/checkoutimage
+        resources:
+          requests:
+            memory: "200Mi"
+          limits:
+            memory: "200Mi"
         ports:
         - containerPort: 8080
 ---

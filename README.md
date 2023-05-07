@@ -24,6 +24,22 @@ Postman for CURL commands
 ## General description of the UI with the primary actions
 The user will be able to use CURL commands to place orders for either sneaker or cleats. Buyers can add shoes to their carts or delete them. Buyers can look at the inventory edited by the vendor to see what shoes are available. The buyer can check out to place their order and get a final total. The vendor is able to add shoes to the inventory or take shoes away. The shoeCatalog text file gives examples of cleats and sneakers to add to inventory/cart. 
 
+## Curl Commands 
+Below are the CURL commands that access the different features of the application. Localhost can be substituted for GKE cluster EXTERNAL_IP. Checkout service does not need to be CURL as it is accessible through the Buyer service. 
+### Buyer 
+GET localhost:31000/buyer = retrieves user's cart
+GET localhost:31000/buyer/inventory = retrieves inventory that is supplied via the vendor
+GET localhost:31000/buyer/checkout (input credit card info) = calculates total price for cart and displays checkout info
+POST localhost:31000/buyer (input shoe info) = adds shoe to cart 
+DELETE localhost:31000/buyer  (input shoe info) = deletes shoe from cart
+DELETE localhost:31000/buyer/deleteall  = deletes all shoes from cart
+
+### Vendor 
+GET localhost:32000/vendor = retrieves inventory of shoe store
+POST localhost:32000/vendor (input shoe info) = adds shoe to inventory
+DELETE localhost:32000/vendor (input shoe info) = deletes shoe from inventory
+
+
 ## Deployment instructions 
 There are two bash shell scripts that will deploy the microservices and config map on to kubernetes using YAML files. These YAML files can be found in the "kubernetes" folder of the project. 
 ### Local Machine

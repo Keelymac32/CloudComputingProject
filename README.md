@@ -40,5 +40,13 @@ Then run the script using:
 This will clone the github repository on to your local computer and deploy the YAML files to kubernetes. 
 This will deploy the entire suite of microservices to kubernetes on your local computer. 
 ### GKE Virtual Machine
-If you would like to deploy on GKE then you can use the deployGKE.sh script to clone the github repository to your computer, then will deploy the YAML files and create specific NodePort holes in the google firewall to ensure that you can connect to the microservices. Use the commands
-"chmod +x deployGKE.sh" and "./deployGKE.sh" to run application on GKE. 
+If you would like to deploy on GKE then you can use the deployGKE.sh script to clone the github repository to your computer, then will deploy the YAML files and create specific NodePort holes in the google firewall to ensure that you can connect to the microservices. Use following command to execute the bash script.
+```sh
+chmod +x deployGKE.sh
+```
+and then to run the bash script run the following script:
+You may need to sign into GitHub when the script begins cloning the repository.
+
+```sh
+./deployGKE.sh
+```

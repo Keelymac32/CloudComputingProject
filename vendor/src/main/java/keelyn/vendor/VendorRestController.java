@@ -32,30 +32,21 @@ public class VendorRestController {
     @GetMapping()
     public String getinventory(){
         //Call to the inventory database will return items in the inventory 
-        return inventory.toString();
+        return "Shoe Store Inventory:" + "\n" + inventory.toString();
     }
-
-
 
 // Method that adds a shoe to the inventory 
     @PostMapping()
-    public Shoe addShoeInventory(@Valid @RequestBody Shoe shoe){
+    public String addShoeInventory(@Valid @RequestBody Shoe shoe){
         inventory.add(shoe);
-    return shoe;
+    return shoe.toString() + "Successfully Added " + shoe.getName() + " to Inventory";
 
 }
 
     @DeleteMapping()
     public String deleteShoeInventory(@Valid @RequestBody Shoe shoe){
         inventory.remove(shoe);
-        return inventory.toString();
-    }
-
-    @PutMapping()
-    public String updateShoeInventory(@Valid @RequestBody Shoe updatedShoe){
-        
-
-        return "Not Configured";
+        return inventory.toString() + "\n" + "Successfully Removed " + shoe.getName() + " From Inventory";
     }
 
 

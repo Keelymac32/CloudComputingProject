@@ -89,12 +89,7 @@ public class Shoe {
  
     @Override
     public String toString() {
-        return "Shoe{" +
-                "id= " + id +
-                "type= " + type +
-                ", name= '" + name + '\'' +
-                ", price= $" + price +
-                '}';
+        return "Shoe { id: " + id + ", " + type + ", " + name + ", $" + price + "}" + "\n";
     }
  
 }

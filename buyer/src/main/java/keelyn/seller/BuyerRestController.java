@@ -33,7 +33,7 @@ public class BuyerRestController {
 
     @GetMapping()
     public String getCart(){
-        return cart.toString();
+        return "Your Cart: " + "\n" + cart.toString();
     }
 
     @GetMapping("/inventory")
@@ -44,28 +44,35 @@ public class BuyerRestController {
 
 
     @GetMapping("/checkout")
-    public Double Checkout(@Valid @RequestBody creditcard card){
+    public String Checkout(@Valid @RequestBody creditcard card){
         Double total = 0.0;
         total = checkoutService.gettingTotal(cart);
-        return total;
+        String CartTotal = "Cart Total = $" + total ;
+        String Tokenized = "**** **** **** ";
+        String Id = String.valueOf(card.getId());
+        String finalId = Tokenized + Id.substring(Id.length() - 4);
+        String cardinfo = "Your Card Info : " + card.getName() + ", " + finalId + ", " + card.getDate();
+
+
+        return cart.toString() + "\n" + CartTotal + "\n"  + cardinfo;
 }
 
     @PostMapping()
-    public Shoe addShoeCart(@Valid @RequestBody Shoe shoe){
+    public String addShoeCart(@Valid @RequestBody Shoe shoe){
         cart.add(shoe);
-        return shoe;
+        return shoe.toString() + "Successfully Added To Cart";
 
 }
 
     @DeleteMapping()
     public String deleteShoeCart(@Valid @RequestBody Shoe shoe){
         cart.remove(shoe);
-        return cart.toString();
+        return shoe.toString() + "Successfully Deleted From Cart";
     }
     @DeleteMapping("/deleteall")
     public String deleteAllShoeCart(@Valid @RequestBody Shoe shoe){
         cart.removeAll(cart);
-        return cart.toString();
+        return "Your Cart Has Been Emptied";
     }
 
  }

@@ -46,13 +46,27 @@ Then run the script using:
 This will clone the github repository on to your local computer and deploy the YAML files to kubernetes. 
 This will deploy the entire suite of microservices to kubernetes on your local computer. 
 ### GKE Virtual Machine
-If you would like to deploy on GKE then you can use the deployGKE.sh script to clone the github repository to your computer, then will deploy the YAML files and create specific NodePort holes in the google firewall to ensure that you can connect to the microservices. Use following command to execute the bash script.
+If you would like to deploy on GKE then you can use the deployGKE.sh script to deploy the YAML files and create specific NodePort holes in the google GKE firewall to ensure that you can connect to the microservices. Use following command to execute the bash script.
+First Clone the repo using this command:
+```sh
+git clone https://github.com/Keelymac32/CloudComputingProject
+```
+Then go into the CloudComputingProject Repo using:
+```sh
+cd CloudComputingProject
+```
+Now that you are in the directory you can execute the bash script using:
+
 ```sh
 chmod +x deployGKE.sh
 ```
-and then to run the bash script run the following script:
-You may need to sign into GitHub when the script begins cloning the repository.
-
+and then to run the bash script run the following command:
 ```sh
 ./deployGKE.sh
 ```
+The buyer service is accessible through port 31000 and the vendor is accessible through port 32000
+To find your GKE cluster EXTERNAL_IP use this command:
+```sh
+kubectl get nodes -o wide
+```
+Finally you can CURL the application in your browser using the cluster http://EXTERNAL_IP:31000/buyer or http://EXTERNAL_IP:32000/vendor

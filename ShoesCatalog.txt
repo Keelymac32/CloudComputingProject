@@ -20,10 +20,8 @@ Shoes
     "name" : "Nike Zoom Fly Running Sneaker", 
     "price" : 109.99}
 
-
-    Credit Cards 
-    { 
-    "id": 2322323, 
+Credit Cards
+{   "id": 2322323, 
     "CSV": 370,
     "name" : "Keelyn McNamara", 
-    "data" : "01/01/2001"}
+    "date" : "01/01/2001"}
